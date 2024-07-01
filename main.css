@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  
+  color: #222;
+  font-family: system-ui;
+  
+  background: #ecfeff;
+  overflow-x: hidden;
+  
+  background: linear-gradient(
+    170deg,
+    #F96488 40%,
+    #fff 40% 
+  );
+}
+
+img,
+button,
+input {
+  display: block;
+}
+
+img {
+  width: 100%;
+}
+
+button,
+input {
+  outline: 0;
+  border: 0;
+  background: #eee;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  width: 100%;
+  max-width: 600px;
+  
+  padding: 2rem;
+}
+
+header {
+  color: #fff;
+  margin-bottom: 70px;
+}
+
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+header p {
+  font-size: 0.875rem;
+  color: #eee;
+}
+
+#item-list {
+  position: relative;
+  
+  padding-inline: .5rem;
+  
+  background: white;
+  border-radius: .25rem;
+  box-shadow: 4px 4px 12px rgba(10, 10, 10, 0.35);
+}
+
+#item-list .list-item:not(:last-child) {
+  border-bottom: 1.5px solid #f3f4f6;
+}
+
+.list-item {
+  --__transY: 0;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: 0.875rem;
+  
+  padding: 1rem;
+  background: white;
+  
+  transition: .4s linear;
+}
+
+.item-pos {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  
+  width: 30px;
+  aspect-ratio: 1;
+  
+  font-weight: 600;
+  font-size: 1rem;
+  color: #444;
+  
+  background: #F8F8F8;
+  border-radius: 100vw;
+}
+
+.item-img {
+  width: 40px;
+  aspect-ratio: 1;
+  background: #bbb;
+  border-radius: .125rem;
+  object-fit: cover;
+}
+
+.item-title {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.item-name {
+  font-size: 0.65rem;
+  color: #999;
+}
+
+.item-views {
+  margin-left: auto;
+  margin-bottom: auto;
+  color: #999;
+}
+
+.list-item-active {
+  transform: translateY(var(--__transY)) scale(1.2);
+  border-radius: .25rem;
+  box-shadow: 4px 4px 10px rgba(20, 20, 20, 0.55);
+  
+  background: linear-gradient(
+    to top right,
+    #C22F53,
+    #fff 60%
+  );
+  border: 0 !important;
+}
